@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FuelTrack Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<!-- AOS (scroll animations) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- VanillaTilt.js -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- tsParticles (animación de partículas) -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+<!-- Botón Volver Arriba -->
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">⬆️</button>
+
+<body>
+   <!-- Fondo de partículas -->
+<div id="particles-bg"></div>
+ <!-- Barra de progreso -->
+<div class="scroll-progress"></div>
+
+
+
+
+  <!-- Barra de navegación -->
+<!-- NAVBAR actualizado -->
+<header class="navbar">
+  <div class="logo-container" id="logo">
+    <img src="images/logo.png" alt="FuelTrack Logo" class="logo" />
+    <span class="logo-text">FuelTrack</span>
+  </div>
+
+  <nav class="navbar-links">
+    <a href="#home" class="navbar-link active">Home</a>
+    <a href="#features" class="navbar-link">Features</a>
+    <a href="#pricing" class="navbar-link">Pricing</a>
+    <a href="#contact" class="navbar-link">Contact</a>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <button class="lang-btn">EN</button>
+      <button class="lang-btn">ES</button>
+    </div>
+  </nav>
+</header>
+
+  
+
+<!-- 🚀 HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>         <!-- Fondo con parallax -->
+  <div class="hero-overlay"></div>    <!-- Capa oscura encima del fondo -->
+
+  <div class="hero-content">
+    <h1><span class="typed-text"></span></h1>
+    <p>Tu plataforma para una gestión eficiente de pedidos de combustible.</p>
+    <a href="#features" class="cta-button" data-tilt>Conoce Más</a>
+  </div>
+</section>
+
+
+  <!-- Sección de Características -->
+  <section class="features" id="features">
+    <h2>Nuestras Funcionalidades</h2>
+    <!-- Botones Tabs -->
+<!-- Sección de tabs -->
+<div class="toggle-switch" id="toggle-switch">
+  <div class="toggle-indicator" id="toggle-indicator"></div>
+  <button class="toggle-btn active" data-target="cliente">Cliente Empresarial</button>
+  <button class="toggle-btn" data-target="proveedor">Proveedor</button>
+</div>
+    <!-- Grupo: Cliente -->
+    <div class="features-group show" id="cliente">
+      <div class="features-grid">
+        <div class="feature-card popular" data-aos="fade-up">
+          <span class="badge">Más usado</span>
+          <img src="images/registropedido.png" alt="">
+          <h4>Registro de Pedidos</h4>
+          <p>Solicita combustible especificando tipo, cantidad y planta destino.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/cargacompro.png" alt="">
+          <h4>Carga de Comprobantes</h4>
+          <p>Sube tus vouchers y estados para validación automática.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/seguimientotiemporeal.png" alt="">
+          <h4>Seguimiento en Tiempo Real</h4>
+          <p>Monitorea el estado del pedido en tiempo real.</p>
+        </div>
+        <div class="feature-card new" data-aos="fade-up">
+          <span class="badge">Nuevo</span>
+          <img src="images/confirmacionreportes.png" alt="">
+          <h4>Confirmación y Reportes</h4>
+          <p>Confirma entregas y genera análisis de consumo.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Grupo: Proveedor -->
+    <div class="features-group" id="proveedor">
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/AprobaciónRechazodePedidos.png" alt="">
+          <h4>Aprobación de Pedidos</h4>
+          <p>Acepta o rechaza solicitudes en tiempo real.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/Asignación de Transporte y Conductor.png" alt="">
+          <h4>Asignación Logística</h4>
+          <p>Gestiona vehículos y choferes por disponibilidad.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/Cierre y Reportes de Venta.png" alt="">
+          <h4>Cierre y Reportes</h4>
+          <p>Genera reportes de ventas y tiempos.</p>
+        </div>
+        <div class="feature-card new" data-aos="fade-up">
+          <span class="badge">Nuevo</span>
+          <img src="images/Reprogramaciones.png" alt="">
+          <h4>Reprogramaciones</h4>
+          <p>Cambia lugar, chofer o cisterna según necesidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Grupo Proveedor -->
+    <div class="features-group" id="proveedor">
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/AprobaciónRechazodePedidos.png" alt="">
+          <h4>Aprobación de Pedidos</h4>
+          <p>Acepta o rechaza solicitudes en tiempo real.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/Asignación de Transporte y Conductor.png" alt="">
+          <h4>Asignación Logística</h4>
+          <p>Gestiona vehículos y choferes por disponibilidad.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/Cierre y Reportes de Venta.png" alt="">
+          <h4>Cierre y Reportes</h4>
+          <p>Genera reportes de ventas y despacho.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+          <img src="images/Reprogramaciones.png" alt="">
+          <h4>Reprogramaciones</h4>
+          <p>Cambia fecha, lugar o unidad según necesidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- o para separador inferior -->
+<div class="wave-bottom">
+  <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#eaf3fb" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,101.3C640,117,800,139,960,133.3C1120,128,1280,96,1360,80L1440,64L1440,150L1360,150C1280,150,1120,150,960,150C800,150,640,150,480,150C320,150,160,150,80,150L0,150Z"></path>
+  </svg>
+</div>
+  
+
+  <!-- Sección de Bienvenida -->
+<!-- Sección de Bienvenida -->
+<section class="welcome-section" id="welcome">
+  <div class="welcome-content">
+    <h2>¡Bienvenido a FuelTrack!</h2>
+    <p>Tu plataforma para una gestión eficiente de pedidos de combustible.</p>
+    <a href="#features" class="cta-button">Conoce Más</a>
+  </div>
+</section>
+
+
+  
+
+ <!-- Sección de Testimonios -->
+ <section class="testimonials-mosaic" id="testimonials">
+  <h2 data-aos="fade-up">Testimonios de Clientes</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-box large" data-aos="zoom-in">
+      <img src="images/juan-perez.png" alt="Juan Pérez" />
+      <div class="testimonial-info">
+        <h3>Juan Pérez</h3>
+        <p>Director de Logística</p>
+        <blockquote>"FuelTrack ha transformado cómo gestionamos nuestros pedidos de combustible."</blockquote>
+      </div>
+    </div>
+
+    <div class="testimonial-box" data-aos="zoom-in">
+      <img src="images/maria-garcia.png" alt="María García" />
+      <div class="testimonial-info">
+        <h3>María García</h3>
+        <p>Compras</p>
+        <blockquote>"Intuitiva, rápida y confiable. Todo lo que necesitas."</blockquote>
+      </div>
+    </div>
+
+    <div class="testimonial-box" data-aos="zoom-in">
+      <img src="images/carlos-lopez.png" alt="Carlos López" />
+      <div class="testimonial-info">
+        <h3>Carlos López</h3>
+        <p>Jefe de Almacén</p>
+        <blockquote>"Ahora tenemos control total y visibilidad completa."</blockquote>
+      </div>
+    </div>
+
+    <!-- Puedes añadir más... -->
+  </div>
+</section>
+
+
+  
+
+  <!-- Sección de Precios -->
+<section class="pricing-section" id="pricing">
+  <h2 data-aos="fade-up">Planes de Suscripción</h2>
+  <p class="pricing-subtext" data-aos="fade-up" data-aos-delay="100">Elige el plan que mejor se adapte a tus necesidades empresariales.</p>
+
+  <div class="pricing-cards">
+
+    <!-- Básico -->
+    <div class="pricing-card" data-aos="zoom-in">
+      <h3>Básico</h3>
+      <p class="price">$29<span>/mes</span></p>
+      <ul class="features-list">
+        <li>Gestión de 1 sede</li>
+        <li>Historial limitado</li>
+        <li>Soporte básico</li>
+      </ul>
+      <a href="#signup" class="cta-button">Comenzar</a>
+    </div>
+
+    <!-- Pro (Popular) -->
+    <div class="pricing-card popular" data-aos="zoom-in" data-aos-delay="150">
+      <span class="badge">Popular</span>
+      <h3>Pro</h3>
+      <p class="price">$59<span>/mes</span></p>
+      <ul class="features-list">
+        <li>Hasta 5 sedes</li>
+        <li>Reportes descargables</li>
+        <li>Soporte prioritario</li>
+      </ul>
+      <a href="#signup" class="cta-button">Elegir Pro</a>
+    </div>
+
+    <!-- Empresarial -->
+    <div class="pricing-card" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Empresarial</h3>
+      <p class="price">$99<span>/mes</span></p>
+      <ul class="features-list">
+        <li>Sedes ilimitadas</li>
+        <li>Integración ERP</li>
+        <li>Soporte dedicado</li>
+      </ul>
+      <a href="#signup" class="cta-button">Contactar</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Sección de Contacto -->
+<section class="contact-section" id="contact">
+  <h2 data-aos="fade-up">Contáctanos</h2>
+  <p class="contact-subtext" data-aos="fade-up" data-aos-delay="100">¿Tienes preguntas o quieres una demo? ¡Escríbenos!</p>
+
+  <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="5" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">Enviar mensaje</button>
+  </form>
+</section>
+
+
+<!-- Pie de página -->
+<footer class="footer" id="footer">
+  <div class="footer-content">
+    <h4>FuelTrack</h4>
+    <p>Optimiza y digitaliza la gestión de pedidos de combustible.</p>
+    
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in" aria-label="LinkedIn"></i></a>
+    </div>
+
+    <p class="footer-copy">© 2025 FuelTrack. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

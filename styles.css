@@ -1,0 +1,939 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* --- Estilos generales --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* --- Toolbar (Navbar) fondo blanco --- */
+ /* === NAVBAR ESTILO MODERNO === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === Logo animado === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.logo-container:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* === Links === */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  position: relative;
+  font-weight: 600;
+  color: #004080;
+  text-decoration: none;
+  padding: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: #007bff;
+}
+
+/* === Indicador animado debajo del link activo === */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.4s ease;
+}
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+/* === Idioma === */
+.language-selector {
+  display: flex;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #004080;
+  border: 1px solid rgba(0, 123, 255, 0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+.lang-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+
+/* 🎨 HERO SECTION */
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Fondo con efecto parallax */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: url('images/hero-decor.png') no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+  will-change: transform;
+}
+
+/* Capa oscura sobre el fondo */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta opacidad aquí */
+  z-index: -1;
+}
+
+/* Contenido del Hero */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  color: #004080;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #e6b800;
+}
+
+
+
+/* Overlay oscuro para contraste */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* ajuste aquí si quieres más claro u oscuro */
+  z-index: 0;
+}
+
+/* Contenido encima del overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #3AAA35, #2c9c2c);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(58, 170, 53, 0.3);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* efecto pulsado */
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(58, 170, 53, 0.4);
+}
+
+/* efecto luz cruzando */
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.cta-button:hover::before {
+  left: 125%;
+}
+
+/* --- Features --- */
+/* === Curvas decorativas SVG === */
+.wave-top,
+.wave-bottom {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+}
+
+.wave-top svg {
+  display: block;
+  position: relative;
+  top: -1px;
+}
+
+.wave-bottom svg {
+  display: block;
+  position: relative;
+  bottom: -1px;
+}
+
+/* Asegurar capa inferior */
+.wave-top svg path,
+.wave-bottom svg path {
+  transition: all 0.3s ease-in-out;
+}
+/* === FEATURES Sección === */
+.features {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, #eaf3fb, #ffffff);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 250%;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 128, 255, 0.05), transparent 70%);
+  z-index: 0;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Botones tabs === */
+/* Contenedor central */
+.toggle-switch {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  border-radius: 50px;
+  padding: 6px;
+  width: 320px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* Botones */
+.toggle-btn {
+  flex: 1;
+  z-index: 1;
+  border: none;
+  background: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  color: #004080;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  color: #fff;
+}
+
+/* Indicador deslizante */
+.toggle-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 50%;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  z-index: 0;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.4);
+}
+/* === Cards Grid === */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Feature Card === */
+.feature-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  width: 100%;
+  max-width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.feature-card h4 {
+  color: #004080;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* === Badges === */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #007bff;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  animation: pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card.new .badge {
+  background: #28a745;
+}
+
+.feature-card.popular .badge {
+  background: #ff9800;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* === Mostrar y ocultar secciones === */
+.features-group {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.features-group.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.feature-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 123, 255, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  transition: all 0.4s ease;
+}
+.badge::after {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  animation: sparkleFloat 2s infinite ease-in-out;
+  font-size: 0.85rem;
+}
+
+@keyframes sparkleFloat {
+  0%   { transform: translateY(0); opacity: 0; }
+  50%  { transform: translateY(-5px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(-10px); opacity: 0; }
+}
+
+/* === Sección de Bienvenida con fondo y overlay === */
+.welcome-section {
+  position: relative;
+  height: 100vh;
+  background: url("images/welcome-bg.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Overlay oscuro sin efectos extra */
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* solo oscurece */
+  z-index: 0;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  padding: 2rem;
+  animation: fadeInUp 1.2s ease;
+}
+
+.welcome-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Botón moderno */
+.welcome-content .cta-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-content .cta-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* === Testimonios === */
+.testimonials-mosaic {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, #f7f9fc, #eef2f7);
+  text-align: center;
+}
+
+.testimonials-mosaic h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  color: #003366;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-info h3 {
+  margin: 0.2rem 0;
+  font-size: 1.1rem;
+  color: #004080;
+}
+
+.testimonial-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.testimonial-info blockquote {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Estilo para destacar un bloque más grande */
+.testimonial-box.large {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .testimonial-box.large {
+    grid-column: span 1;
+  }
+}
+
+
+/* --- Precios --- */
+/* === Sección Precios === */
+.pricing-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f9fbff, #e6f2ff);
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.pricing-subtext {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+/* Cards */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+  font-size: 1.4rem;
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 1rem 0;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+/* Botón */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #004080;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #002f5f;
+  transform: scale(1.05);
+}
+
+/* Plan popular */
+.pricing-card.popular {
+  border: 2px solid #ffc107;
+  z-index: 1;
+  transform: scale(1.03);
+}
+
+.pricing-card.popular::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), transparent);
+  z-index: -1;
+  border-radius: 16px;
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.badge {
+  background-color: #ffc107;
+  color: #004080;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+  
+  
+/* --- Contacto --- */
+/* === Contact Section === */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtext {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+/* Formulario */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #004080;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+/* Botón enviar */
+.submit-button {
+  background-color: #004080;
+  color: #ffffff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.submit-button:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+/* === Footer === */
+.footer {
+  background-color: #00264d;
+  color: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer h4 {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #ffcc00;
+  color: #00264d;
+  transform: scale(1.1);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+  
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #007bff;
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
+
+/* Fondo de partículas */
+#particles-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Botón Volver Arriba */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: none;  /* Empieza oculto */
+  z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+  background-color: #0056b3;  /* Cambio de color al hacer hover */
+  transform: scale(1.1);  /* Efecto de aumento al pasar el ratón */
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 204, 0, 0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 204, 0, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 204, 0, 0.5); }
+}
+
+.hero .cta-button {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
