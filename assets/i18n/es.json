@@ -87,5 +87,8 @@
 "footer.link.contact": "Contacto",
 "footer.link.testimonials": "Testimonios",
 "footer.copy": "© 2025 FuelTrack. Todos los derechos reservados."
+,
+"navbar.login.client": "Cliente",
+"navbar.login.provider": "Proveedor"
 
 }
