@@ -1,0 +1,28 @@
+<!-- login/login-buyer.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Cliente | FuelTrack</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/pages/auth.css" />
+</head>
+<body class="auth-page">
+  <section class="auth-container">
+    <img src="../images/logo.png" alt="FuelTrack Logo" class="auth-logo" />
+    <h2>Acceso para Clientes</h2>
+    <p class="auth-subtitle">Gestiona tus pedidos de combustible fácilmente</p>
+    <form class="auth-form">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="cliente@empresa.com" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="********" required />
+
+      <button type="submit" class="submit-button">Iniciar Sesión</button>
+      <p class="auth-note">¿No eres cliente? <a href="../register/register-buyer.html">Contáctanos</a></p>
+    </form>
+  </section>
+</body>
+</html>

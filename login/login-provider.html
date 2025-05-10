@@ -1,0 +1,31 @@
+<!-- login/login-provider.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Proveedor | FuelTrack</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/pages/auth.css" />
+</head>
+<body class="auth-page">
+  <section class="auth-container">
+    <img src="../images/logo.png" alt="FuelTrack Logo" class="auth-logo" />
+    <h2>Acceso para Proveedores</h2>
+    <p class="auth-subtitle">Optimiza la gestión de pedidos de tus clientes</p>
+    <form class="auth-form">
+      <label for="ruc">RUC</label>
+      <input type="text" id="ruc" name="ruc" placeholder="12345678900" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="proveedor@empresa.com" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="********" required />
+
+      <button type="submit" class="submit-button">Iniciar Sesión</button>
+      <p class="auth-note">¿No eres proveedor? <a href="../register/register-provider.html">Contáctanos</a></p>
+    </form>
+  </section>
+</body>
+</html>
