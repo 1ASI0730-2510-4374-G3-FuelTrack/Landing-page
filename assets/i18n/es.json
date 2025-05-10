@@ -1,0 +1,91 @@
+{
+  "navbar.home": "Inicio",
+  "navbar.features": "Funcionalidades",
+  "navbar.pricing": "Planes",
+  "navbar.contact": "Contacto"
+  ,
+
+  "hero.title": "FuelTrack",
+  "hero.subtitle": "Tu plataforma para una gestión eficiente de pedidos de combustible.",
+  "hero.cta": "Conoce Más"
+  ,
+"features.title": "Nuestras Funcionalidades",
+"features.tab.client": "Cliente Empresarial",
+"features.tab.provider": "Proveedor",
+
+"features.client.card1.title": "Registro de Pedidos",
+"features.client.card1.desc": "Solicita combustible especificando tipo, cantidad y planta destino.",
+"features.client.card2.title": "Carga de Comprobantes",
+"features.client.card2.desc": "Sube tus vouchers y estados para validación automática.",
+"features.client.card3.title": "Seguimiento en Tiempo Real",
+"features.client.card3.desc": "Monitorea el estado del pedido en tiempo real.",
+"features.client.card4.title": "Confirmación y Reportes",
+"features.client.card4.desc": "Confirma entregas y genera análisis de consumo.",
+
+"features.provider.card1.title": "Aprobación de Pedidos",
+"features.provider.card1.desc": "Acepta o rechaza solicitudes en tiempo real.",
+"features.provider.card2.title": "Asignación Logística",
+"features.provider.card2.desc": "Gestiona vehículos y choferes por disponibilidad.",
+"features.provider.card3.title": "Cierre y Reportes",
+"features.provider.card3.desc": "Genera reportes de ventas y tiempos.",
+"features.provider.card4.title": "Reprogramaciones",
+"features.provider.card4.desc": "Cambia lugar, chofer o cisterna según necesidad."
+,
+"welcome.title": "¡Bienvenido a FuelTrack!",
+"welcome.subtitle": "Tu plataforma para una gestión eficiente de pedidos de combustible.",
+"welcome.cta": "Conoce Más"
+,
+"testimonials.title": "Testimonios de Clientes",
+
+"testimonials.1.name": "Juan Pérez",
+"testimonials.1.role": "Director de Logística",
+"testimonials.1.quote": "FuelTrack ha transformado cómo gestionamos nuestros pedidos de combustible.",
+
+"testimonials.2.name": "María García",
+"testimonials.2.role": "Compras",
+"testimonials.2.quote": "Intuitiva, rápida y confiable. Todo lo que necesitas.",
+
+"testimonials.3.name": "Carlos López",
+"testimonials.3.role": "Jefe de Almacén",
+"testimonials.3.quote": "Ahora tenemos control total y visibilidad completa."
+,
+"pricing.title": "Planes de Suscripción",
+"pricing.subtitle": "Elige el plan que mejor se adapte a tus necesidades empresariales.",
+
+"pricing.basic.title": "Básico",
+"pricing.basic.feature1": "Gestión de 1 sede",
+"pricing.basic.feature2": "Historial limitado",
+"pricing.basic.feature3": "Soporte básico",
+"pricing.basic.cta": "Comenzar",
+
+"pricing.pro.badge": "Popular",
+"pricing.pro.title": "Pro",
+"pricing.pro.feature1": "Hasta 5 sedes",
+"pricing.pro.feature2": "Reportes descargables",
+"pricing.pro.feature3": "Soporte prioritario",
+"pricing.pro.cta": "Elegir Pro",
+
+"pricing.enterprise.title": "Empresarial",
+"pricing.enterprise.feature1": "Sedes ilimitadas",
+"pricing.enterprise.feature2": "Integración ERP",
+"pricing.enterprise.feature3": "Soporte dedicado",
+"pricing.enterprise.cta": "Contactar"
+,
+"contact.title": "¿Listo para transformar tu logística?",
+"contact.description": "Contáctanos para más información, solicitar una demo o resolver cualquier duda. Estamos para ayudarte.",
+
+"contact.form.title": "Escríbenos",
+"contact.form.name.label": "Nombre",
+"contact.form.email.label": "Correo electrónico",
+"contact.form.message.label": "Mensaje",
+"contact.form.button": "Enviar mensaje"
+,
+"footer.description": "Optimiza y digitaliza la gestión de pedidos de combustible con una plataforma intuitiva, segura y eficiente.",
+"footer.link.home": "Inicio",
+"footer.link.features": "Funcionalidades",
+"footer.link.pricing": "Precios",
+"footer.link.contact": "Contacto",
+"footer.link.testimonials": "Testimonios",
+"footer.copy": "© 2025 FuelTrack. Todos los derechos reservados."
+
+}

@@ -1,0 +1,91 @@
+{
+  "navbar.home": "Home",
+  "navbar.features": "Features",
+  "navbar.pricing": "Pricing",
+  "navbar.contact": "Contact",
+
+  "hero.title": "FuelTrack",
+  "hero.subtitle": "Your platform for efficient fuel order management.",
+  "hero.cta": "Learn More"
+  ,
+"features.title": "Our Features",
+"features.tab.client": "Business Client",
+"features.tab.provider": "Supplier",
+
+"features.client.card1.title": "Order Registration",
+"features.client.card1.desc": "Request fuel by specifying type, quantity, and delivery site.",
+"features.client.card2.title": "Voucher Upload",
+"features.client.card2.desc": "Upload your payment receipts for automatic validation.",
+"features.client.card3.title": "Real-Time Tracking",
+"features.client.card3.desc": "Monitor the order status in real time.",
+"features.client.card4.title": "Confirmation & Reports",
+"features.client.card4.desc": "Confirm deliveries and generate consumption reports.",
+
+"features.provider.card1.title": "Order Approval",
+"features.provider.card1.desc": "Accept or reject requests in real time.",
+"features.provider.card2.title": "Logistics Assignment",
+"features.provider.card2.desc": "Manage vehicles and drivers based on availability.",
+"features.provider.card3.title": "Closure & Reports",
+"features.provider.card3.desc": "Generate sales and delivery time reports.",
+"features.provider.card4.title": "Rescheduling",
+"features.provider.card4.desc": "Change location, driver, or tanker as needed."
+,
+"welcome.title": "Welcome to FuelTrack!",
+"welcome.subtitle": "Your platform for efficient fuel order management.",
+"welcome.cta": "Learn More"
+,
+"testimonials.title": "Client Testimonials",
+
+"testimonials.1.name": "Juan Pérez",
+"testimonials.1.role": "Logistics Director",
+"testimonials.1.quote": "FuelTrack has transformed how we manage our fuel orders.",
+
+"testimonials.2.name": "María García",
+"testimonials.2.role": "Purchasing",
+"testimonials.2.quote": "Intuitive, fast and reliable. Everything you need.",
+
+"testimonials.3.name": "Carlos López",
+"testimonials.3.role": "Warehouse Manager",
+"testimonials.3.quote": "We now have total control and full visibility."
+,
+"pricing.title": "Subscription Plans",
+"pricing.subtitle": "Choose the plan that best fits your business needs.",
+
+"pricing.basic.title": "Basic",
+"pricing.basic.feature1": "Manage 1 location",
+"pricing.basic.feature2": "Limited history",
+"pricing.basic.feature3": "Basic support",
+"pricing.basic.cta": "Get Started",
+
+"pricing.pro.badge": "Popular",
+"pricing.pro.title": "Pro",
+"pricing.pro.feature1": "Up to 5 locations",
+"pricing.pro.feature2": "Downloadable reports",
+"pricing.pro.feature3": "Priority support",
+"pricing.pro.cta": "Choose Pro",
+
+"pricing.enterprise.title": "Enterprise",
+"pricing.enterprise.feature1": "Unlimited locations",
+"pricing.enterprise.feature2": "ERP Integration",
+"pricing.enterprise.feature3": "Dedicated support",
+"pricing.enterprise.cta": "Contact Us"
+,
+"contact.title": "Ready to transform your logistics?",
+"contact.description": "Contact us for more information, request a demo, or resolve any questions. We’re here to help.",
+
+"contact.form.title": "Write to Us",
+"contact.form.name.label": "Name",
+"contact.form.email.label": "Email",
+"contact.form.message.label": "Message",
+"contact.form.button": "Send Message"
+
+,
+"footer.description": "Optimize and digitize your fuel order management with an intuitive, secure and efficient platform.",
+"footer.link.home": "Home",
+"footer.link.features": "Features",
+"footer.link.pricing": "Pricing",
+"footer.link.contact": "Contact",
+"footer.link.testimonials": "Testimonials",
+"footer.copy": "© 2025 FuelTrack. All rights reserved."
+
+}
